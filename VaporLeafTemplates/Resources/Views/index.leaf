@@ -1,0 +1,31 @@
+#extend("base"):
+#export("title", "Index Page")
+#export("body"):
+
+
+<!--    <h1> Hello #(name) - <i> #(age) </i>!! </h1>-->
+
+    <ul>
+        
+        #for(movie in movies):
+            <li>
+                <div>
+                    #(movie.name)
+                    <br />
+                    #for(review in movie.reviews):
+                        <div>
+                            #(review.title) - #(review.rating)
+                        </div>
+                    #endfor
+                </div>
+            </li>
+            #endfor
+    </ul>
+
+    <form action = "/add-movie", method = "POST">
+        <input type = "text" name = "name" />
+        <button> Add Movie </button>
+    </form>
+
+#endexport
+#endextend

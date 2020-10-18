@@ -1,0 +1,11 @@
+
+#extend("base"):
+#export("title", "Index Page")
+#export("body"):
+
+    <p>
+        About us
+    </p>
+
+#endexport
+#endextend
